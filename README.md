@@ -20,3 +20,26 @@ README.md
 tomsmith/SuperSecretPassword! (Ожидаемо: Успешный вход)
 # Вход с неверным паролем:
 tomsmith/12345 (Ожидаемо: Ошибка)
+
+# Bug report [краткое описание бага] 
+**Severity:** Low 
+**Priority:** Mediom 
+
+**Steps to Reproduce:**
+1.
+2.
+3.
+
+**Actual Result:**
+
+**Expected Result:**
+
+**Environment:**
+*Browser: Chrome*
+*OS: Windows
+
+    
+
+
+
+
