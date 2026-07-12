@@ -47,4 +47,35 @@ tomsmith/12345 (Ожидаемо: Ошибка)
 | TC-JS-03 | Пустой `email` | Создать объект `{name: "Дэн", age: 27, email: ""}`. Проверить валидацию. | Ошибка "email is required" |
 
 
+## code: Simula ##
+Begin
+  Class Rectangle (Width, Height); Real Width, Height;
+
+   Begin
+      Real Area, Perimeter;
+
+      Procedure Update;
+      Begin
+        Area := Width * Height;
+              OutText("Rectangle is updating, Area = "); OutFix(Area,2,8); OutImage;
+        Perimeter := 2*(Width + Height);
+              OutText("Rectangle is updating, Perimeter = "); OutFix(Perimeter,2,8); OutImage;
+      End of Update;
+
+      Update;
+      OutText("Rectangle created: "); OutFix(Width,2,6);
+      OutFix(Height,2,6); OutImage;
+   End of Rectangle;
+
+       Rectangle Class ColouredRectangle (Color); Text Color;
+
+  Begin
+      OutText("ColouredRectangle created, color = "); OutText(Color);
+      OutImage;
+        End of ColouredRectangle;
+
+
+         Ref(Rectangle) Cr;
+   Cr :- New ColouredRectangle(10, 20, "Green");
+End;
 
