@@ -79,3 +79,7 @@ Begin
    Cr :- New ColouredRectangle(10, 20, "Green");
 End;
 
+## TC01: Поиск в Google
+- Шаги: Открыть google.com, ввести "Manual QA", нажать Enter
+- Ожидаемый результат: Появились результаты поиска
+
