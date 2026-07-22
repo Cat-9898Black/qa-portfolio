@@ -1,0 +1,22 @@
+ public class LoginPage {
+    private String correctLogin = "Dan";
+    private String correctPassword = "12345";
+
+    public boolean login(String user, String password) {
+        if (user == null || password == null) {
+            return false;
+        }
+        if (user.equals(correctLogin) && password.equals(correctPassword)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        LoginPage page = new LoginPage();
+        System.out.println(page.login("Dan", "12345"));
+        System.out.println(page.login("Dan", "0000"));
+        System.out.println(page.login(null, null));
+    }
+}
