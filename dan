@@ -1,34 +1,49 @@
  public class LoginPage {
-    // правильные данные (инкапсуляция)
+    // правильные данные
+    (инкапсуляция)
     private String correctLogin = 
-    "Dan";
-    private String correctPassword =
-    "12345";
+"Dan";
+    private String correctPassword
+= "12345";
+    
     // Метод для проверки логина
     public boolean login(String
-    user, String password) {
+user, String password) {
         if (user == null || 
-        password == null) {
-            return false; // Ошибка: пустые поля
+password == null) {
+            return false; // 
+Ошибка: пустые поля
         }
         if 
-        (user.eqals.(correctLogin) && 
-        password.eqals(correctPassword)) {
-          return.true; // Успех
+(user.equals(correctLogin) && 
+password.equals(correctPassword)) {
+            return true; // Успех
         } else {
-          return false; // Ошибка: неверные данные 
+            return false; // 
+Ошибка: неверные данные 
         }
     }  
-       //Главный метода для проверки (твой автотест) 
+    
+    //Главный метода для проверки 
+(твой автотест) 
     public static void
-    main(String[] args) {
+main(String[] args) {
         LoginPage page = new
- LoginPage();
-       // Проверяем успешный вход 
- System.out.println("Успешный вход:" + page.login("Dan", "12345"));
-      // Проверяем неверный пароль 
- System.out.println("Неверный пароль: " + page.login("Dan", "0000"));
-      // Проверяем пустые поля
- System.out.println("Пустые поля: " + page.login(null, null));
+LoginPage();
+
+        // Проверяем успешный вход 
+       
+System.out.println("Успешный вход:
+" + page.login("Dan", "12345"));
+        // Проверяем неверный 
+пароль 
+
+System.out.println("Неверный 
+пароль: " + page.login("Dan",
+"0000"));
+        // Проверяем пустые поля
+        System.out.println("Пустые 
+поля: " + page.login(null, null));
      }
 }    
+ 
