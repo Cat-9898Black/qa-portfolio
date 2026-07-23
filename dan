@@ -24,3 +24,13 @@ public class LoginPage {
 
 
 
+Успешный вход: true
+Неверный пароль: false
+Пустые поля: false
+
+
+
+
+
+
+
