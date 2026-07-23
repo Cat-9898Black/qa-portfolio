@@ -1,91 +1,26 @@
- public class LoginPage {
-    // правильные данные
-    (инкапсуляция)
-    private String correctLogin = 
-"Dan";
-    private String correctPassword
-= "12345";
-    
-    // Метод для проверки логина
-    public boolean login(String
-user, String password) {
-        if (user == null || 
-password == null) {
-            return false; // 
-Ошибка: пустые поля
+public class LoginPage {
+    private String correctLogin = "Dan";
+    private String correctPassword = "12345";
+
+    public boolean login(String user, String password) {
+        if (user == null || password == null) {
+            return false;
         }
-        if 
-(user.equals(correctLogin) && 
-password.equals(correctPassword)) {
-            return true; // Успех
+        if (user.equals(correctLogin) && password.equals(correctPassword)) {
+            return true;
         } else {
-            return false; // 
-Ошибка: неверные данные 
+            return false;
         }
     }  
-    
-    //Главный метода для проверки 
-(твой автотест) 
-    public static void
-main(String[] args) {
-        LoginPage page = new
-LoginPage();
 
-        // Проверяем успешный вход 
-       
-System.out.println("Успешный вход:
-" + page.login("Dan", "12345"));
-        // Проверяем неверный 
-пароль 
-
-System.out.println("Неверный 
-пароль: " + page.login("Dan",
-"0000"));
-        // Проверяем пустые поля
-        System.out.println("Пустые 
-поля: " + page.login(null, null));
-     }
-}    
- 
+    public static void main(String[] args) {
+        LoginPage page = new LoginPage();
+        System.out.println("Успешный вход: " + page.login("Dan", "12345"));
+        System.out.println("Неверный пароль: " + page.login("Dan", "0000"));
+        System.out.println("Пустые поля: " + page.login(null, null));
+    }
+}
 
 
 
 
-
-LoginPage.java:28: error: '{' or ';' expected
-(твой автотест) 
-               ^
-LoginPage.java:36: error: unclosed string literal
-System.out.println("Успешный вход:
-                   ^
-LoginPage.java:37: error: not a statement
-" + page.login("Dan", "12345"));
-                ^
-LoginPage.java:37: error: ';' expected
-" + page.login("Dan", "12345"));
-                   ^
-LoginPage.java:37: error: unclosed string literal
-" + page.login("Dan", "12345"));
-                            ^
-LoginPage.java:41: error: ';' expected
-System.out.println("Неверный 
-      ^
-LoginPage.java:41: error: unclosed string literal
-System.out.println("Неверный 
-                   ^
-LoginPage.java:42: error: not a statement
-пароль: " + page.login("Dan",
-        ^
-LoginPage.java:42: error: ';' expected
-пароль: " + page.login("Dan",
-                        ^
-LoginPage.java:42: error: unclosed string literal
-пароль: " + page.login("Dan",
-                           ^
-LoginPage.java:45: error: unclosed string literal
-        System.out.println("Пустые 
-                           ^
-                           LoginPage.java:46: error: unclosed string literal
-поля: " + page.login(null, null));
-      ^
-20 errors
